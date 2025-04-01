@@ -1,0 +1,36 @@
+{
+  "name": "fute-street",
+  "version": "1.0.0",
+  "description": "MVP de um Jogo Web-Based de Futebol de Rua usando Phaser",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "npx live-server --port=3000",
+    "dev": "npx live-server --port=3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitoryeso/fute-street.git"
+  },
+  "keywords": [
+    "phaser",
+    "game",
+    "football",
+    "soccer",
+    "street"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/vitoryeso/fute-street/issues"
+  },
+  "homepage": "https://github.com/vitoryeso/fute-street#readme",
+  "dependencies": {
+    "phaser": "^3.60.0",
+    "three": "^0.175.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

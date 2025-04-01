@@ -1,0 +1,38 @@
+<svg width="800" height="1200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo da quadra -->
+  <rect width="100%" height="100%" fill="#3b9e47"/>
+  
+  <!-- Linhas da quadra -->
+  <rect x="10" y="10" width="780" height="1180" stroke="white" stroke-width="5" fill="none"/>
+  
+  <!-- Linha central -->
+  <line x1="10" y1="600" x2="790" y2="600" stroke="white" stroke-width="5"/>
+  
+  <!-- Círculo central -->
+  <circle cx="400" cy="600" r="100" stroke="white" stroke-width="5" fill="none"/>
+  <circle cx="400" cy="600" r="5" fill="white"/>
+  
+  <!-- Áreas de gol superior -->
+  <rect x="250" y="10" width="300" height="150" stroke="white" stroke-width="5" fill="none"/>
+  <rect x="300" y="10" width="200" height="70" stroke="white" stroke-width="5" fill="none"/>
+  
+  <!-- Áreas de gol inferior -->
+  <rect x="250" y="1040" width="300" height="150" stroke="white" stroke-width="5" fill="none"/>
+  <rect x="300" y="1120" width="200" height="70" stroke="white" stroke-width="5" fill="none"/>
+  
+  <!-- Marcação de escanteios -->
+  <path d="M 10,10 A 20,20 0 0,1 30,30" stroke="white" stroke-width="5" fill="none"/>
+  <path d="M 790,10 A 20,20 0 0,0 770,30" stroke="white" stroke-width="5" fill="none"/>
+  <path d="M 10,1190 A 20,20 0 0,0 30,1170" stroke="white" stroke-width="5" fill="none"/>
+  <path d="M 790,1190 A 20,20 0 0,1 770,1170" stroke="white" stroke-width="5" fill="none"/>
+  
+  <!-- Texturas da grama (padrão listrado) -->
+  <g opacity="0.1">
+    <rect x="0" y="0" width="800" height="100" fill="#2a7c34"/>
+    <rect x="0" y="200" width="800" height="100" fill="#2a7c34"/>
+    <rect x="0" y="400" width="800" height="100" fill="#2a7c34"/>
+    <rect x="0" y="600" width="800" height="100" fill="#2a7c34"/>
+    <rect x="0" y="800" width="800" height="100" fill="#2a7c34"/>
+    <rect x="0" y="1000" width="800" height="100" fill="#2a7c34"/>
+  </g>
+</svg>

@@ -1,0 +1,140 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Evitar barras de rolagem */
+  background-color: #000; /* Fundo preto */
+  height: 100%;
+  width: 100%;
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos para a mensagem de rotação */
+#rotate-device-message {
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 40%;
+  z-index: 1000; /* Ficar sobre tudo */
+}
+
+/* Media Query para detectar orientação retrato */
+@media (orientation: portrait) {
+  #game-container {
+    display: none; /* Esconde o jogo em modo retrato */
+  }
+  #rotate-device-message {
+    display: block; /* Mostra a mensagem */
+  }
+}
+
+/* Esconder outros elementos da UI em modo retrato se necessário */
+@media (orientation: portrait) {
+  #joystick-area, .btn-acao, #menu-principal, #tela-jogo, #tela-loja, #tela-fim-jogo /* Adicione outros IDs/classes conforme necessário */ {
+     display: none !important; /* Força esconder */
+  }
+}
+
+/* Ajustes adicionais se a UI for HTML fora do canvas */
+#ui-container { /* Supondo que você tenha um container para a UI */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permitir cliques através da UI para o jogo */
+}
+
+#ui-container > * {
+    pointer-events: all; /* Habilitar eventos para elementos específicos da UI */
+}
+
+/* ... (restante do seu CSS) ... */ 
+/* Estilos para o menu hamburguer */
+.menu-hamburguer {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+    pointer-events: auto;
+    padding: 5px;
+}
+
+.hamburguer-line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Estilos para o menu dropdown */
+.menu-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 99;
+    min-width: 200px;
+    pointer-events: auto;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-dropdown h3 {
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #ffde59;
+}
+
+.menu-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-dropdown li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.menu-dropdown li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-dropdown li.active {
+    background-color: rgba(255, 222, 89, 0.2);
+    position: relative;
+}
+
+.menu-dropdown li.active::before {
+    content: "✓";
+    position: absolute;
+    right: 15px;
+}
